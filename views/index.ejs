@@ -11,22 +11,31 @@
           let url = `/?country=${country}`;
           window.location.href = url;
       }
+      function keypress(event) {
+        if (event.keyCode === 13) {
+    getUniversities(document.getElementById('myinput').value);
+        }
+      }
       
   </script>
   </head>
   <body>
     <nav>
-      <input id="myinput"  type="text" placeholder="search your Uni, choose the Country" />
+      <input  onkeypress="keypress()" id="myinput"  type="text" placeholder="search your Uni, choose the Country" />
       <button>
       <img
         class="myicon"
         onclick="getUniversities(document.getElementById('myinput').value)"
        
+
+
+        
+       
         src="faveicon/icons8-search-48.png"
         alt="icon"
       /></button>
     </nav>
-    <!-- <h1>Uni<%- Unis.name !== '' ? ` in ${Unis.name}` : '' %></h1> -->
+    
 <div id="welkome-div">
   <h1 class="welkome-text"><%= title %></h1>
     <p class="welkome-text">Welcome to my API Web-Page</p>
