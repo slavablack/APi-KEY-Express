@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <!-- <link rel="icon" href="faveicon/icons8-search-48.png" type="image/x-icon" /> -->
+    <link rel="icon" href="faveicon/icons8-university-64.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Rubik+Moonrocks&display=swap" rel="stylesheet"> 
+    <script>
+      function getUniversities(country){
+          let url = `/?country=${country}`;
+          window.location.href = url;
+      }
+      
+  </script>
+  </head>
+  <body>
+    <nav>
+      <input id="myinput"  type="text" placeholder="search your Uni, choose the Country" />
+      <button>
+      <img
+        class="myicon"
+        onclick="getUniversities(document.getElementById('myinput').value)"
+       
+        src="faveicon/icons8-search-48.png"
+        alt="icon"
+      /></button>
+    </nav>
+    <!-- <h1>Uni<%- Unis.name !== '' ? ` in ${Unis.name}` : '' %></h1> -->
+<div id="welkome-div">
+  <h1 class="welkome-text"><%= title %></h1>
+    <p class="welkome-text">Welcome to my API Web-Page</p>
+  </div>
+    
+    <strong class="subtitle"><%Unis.map((e) => { %>
+      <ul>
+        <h3 id="name">Country:</h3>
+         <li class="info">  <%=e.country %>  </li> 
+        
+        <h3 id="name">University:</h3>
+      <li class="info"><%=e.name %></li>
+        <img id="uni-img" src="images/uni-img.jpg" alt="uni"/>
+        <h3 id="name">Web-Pages:</h3>
+        <li id="name-web2"><%=e.web_pages %></li>
+        <hr> 
+      </ul>
+      <% })%>
+ 
+
+    
+  </body>
+</html>

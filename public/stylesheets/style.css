@@ -1,0 +1,77 @@
+body {
+  background-color: rgb(221, 214, 214);
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+.subtitle {
+  font-size: 3rem;
+  text-decoration: none;
+}
+nav {
+  margin-top: 20px;
+  height: auto;
+  padding: 0.2rem;
+  background-color: #120349;
+  color: rgb(247, 239, 224);
+  font-weight: bold;
+}
+#myinput {
+  margin-bottom: 2rem;
+  width: 50%;
+  background-color: rgb(241, 246, 248);
+}
+.myicon {
+  width: 30px;
+  padding: 5px;
+}
+#name {
+  color: rgb(26, 59, 151);
+  font-size: 2rem;
+}
+.info {
+  margin-left: 100px;
+  /* margin-bottom: 300px; */
+  list-style-type: none;
+  font-size: 2.5rem;
+  font-family: "Comforter", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+}
+#uni-img {
+  width: 200px;
+  margin-left: 50rem;
+}
+
+#name-web2 {
+  margin-left: 400px;
+  list-style-type: none;
+  font-size: 2.5rem;
+  font-family: "Comforter", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+}
+.welkome-text {
+  text-align: center;
+}
+
+#welkome-div {
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  border: 3px solid black;
+  width: 20%;
+  margin-left: 45rem;
+}
+@keyframes example {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+}
