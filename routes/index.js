@@ -10,6 +10,7 @@ const getUniversities = async (country) => {
   try {
     const response = await axios.get(url + country);
     // console.log(response);
+
     return response.data;
   } catch (err) {
     throw err;

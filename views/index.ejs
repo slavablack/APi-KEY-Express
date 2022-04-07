@@ -6,22 +6,11 @@
     <!-- <link rel="icon" href="faveicon/icons8-search-48.png" type="image/x-icon" /> -->
     <link rel="icon" href="faveicon/icons8-university-64.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Rubik+Moonrocks&display=swap" rel="stylesheet"> 
-    <script>
-      function getUniversities(country){
-          let url = `/?country=${country}`;
-          window.location.href = url;
-      }
-      function keypress(event) {
-        if (event.keyCode === 13) {
-    getUniversities(document.getElementById('myinput').value);
-        }
-      }
-      
-  </script>
+    
   </head>
   <body>
     <nav>
-      <input  onkeypress="keypress()" id="myinput"  type="text" placeholder="search your Uni, choose the Country" />
+      <input   id="myinput"  type="text" placeholder="search your Uni, choose the Country" />
       <button>
       <img
         class="myicon"
@@ -56,6 +45,17 @@
       <% })%>
  
 
-    
+      <script>
+        function getUniversities(country){
+            let url = `/?country=${country}`;
+            window.location.href = url;
+        }
+        function keypress(event) {
+          if (event.keyCode === 13) {
+      getUniversities(document.getElementById('myinput').value);
+          }
+        }
+        document.getElementById('myinput').addEventListener("keypress",keypress)
+    </script>
   </body>
 </html>
